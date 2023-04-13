@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA - ASTERISCOS</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    i = 0;
+    while (i < 3) {
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break
+        } else {
+            if (i == 2) {
+                alert("Ya no puede intetarle, hagalo mas tarde");
+                break;
+            }
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+        i++;
+    }
+</script>

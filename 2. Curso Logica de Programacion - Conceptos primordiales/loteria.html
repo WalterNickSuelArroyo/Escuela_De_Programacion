@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA - LOTERIA</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+    function sorteo(n){
+        return Math.round(Math.random()*n);
+    }
+    var numero = parseInt(prompt("Ingrese un numero"));
+    var numeroPensado = sorteo(numero);
+    var ingreseNumero = parseInt(prompt("Ingrese numero ganador"));
+
+    if (ingreseNumero > numeroPensado) {
+        imprimir("El numero ingresado es mayor al de sistema");
+    }
+    if(ingreseNumero < numeroPensado){
+        imprimir("El numero ingresado es menor al del sistema");
+    }
+    if(ingreseNumero == numeroPensado){
+        imprimir("Ganaste");
+    }
+
+</script>
